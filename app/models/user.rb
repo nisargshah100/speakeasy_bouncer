@@ -1,3 +1,5 @@
+require 'drb'
+
 class User < ActiveRecord::Base
   include DRbUndumped
 
