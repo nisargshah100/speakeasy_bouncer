@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
       cookies.signed['user'] = user.token
       success(UserDecorator.decorate(user), 201)
     else
-      error(['Invalid username or password'])
+      error(['Invalid username or password'], 403)
     end
   end
 
